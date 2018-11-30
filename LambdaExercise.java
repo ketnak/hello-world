@@ -4,7 +4,13 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-
+import java.util.function.Predicate;
+/*java.util.function package has many functions that has 
+*only one method and can be used as lambda. java.util.function has many functional interfaces that can be used.
+* i.e Supplier has get(), which doesnt take a ny input, but returns type T.
+* i.e Function has apply(T) , takes in one type and return another type.
+* I.e Consumer, BiConsumer, BiFunction interfaces are in 
+*/
 public class LambdaExercise {
 
 	public static void main(String[] args) {
@@ -42,18 +48,14 @@ public class LambdaExercise {
 		}
 	}*/
 	
-	private static void printConditionally(List<Person> people, Condition condition) {
+	private static void printConditionally(List<Person> people, Predicate<Person> predicate) {
 		for(Person p : people) {
-			if(condition.test(p)) {
+			if(predicate.test(p)) {
 				System.out.println(p);
 			}
 		}
 	}
 
-	
-	interface Condition{
-		boolean test(Person p);
-	}
 	
 }
 
