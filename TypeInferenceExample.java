@@ -1,5 +1,10 @@
 package learn.java8.lambda;
 
+/* Type Inference is a Java compiler's ability to look at each method invocation 
+*  and corresponding declaration to determine the type argument(s) that make
+*  the invocation applicable.
+*/ 
+
 public class TypeInferenceExample {
 
 	public static void main(String[] args) {
